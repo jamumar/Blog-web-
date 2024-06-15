@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">BLOG</div>
+        <a href="{{ url_for('home') }}" class="new-blog-button">Read Blogs</a>
+    </nav>
+    <div class="container">
+        <h1>Create New Blog</h1>
+        <form id="blog-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Content:</label>
+            <div id="editor-container">
+                <div id="editor"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="{{ url_for('static', filename='new_blog.js') }}"></script>
+    <script src="{{ url_for('static', filename='dark_mode.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">BLOG</div>
+        <!-- <a href="{{ url_for('home') }}" class="home-button">Home</a> -->
+        <a href="{{ url_for('new_blog') }}" class="new-blog-button">Create New Blog</a>
+        <!-- <button id="dark-mode-toggle">
+            <i class="fas fa-adjust"></i>
+        </button> -->
+    </nav>
+    <div class="container">
+        <h1>Blog</h1>
+        <!-- <button id="dark-mode-toggle">
+            <i class="fas fa-adjust"></i> Toggle Dark Mode
+        </button> -->
+        
+        <ul id="blog-list"></ul>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='dark_mode.js') }}"></script>
+</body>
+</html>
